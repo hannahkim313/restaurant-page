@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Page</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <script src="main.js" defer></script>
+</head>
+    <body>
+        <!-- Uncomment when ready to create using webpack -->
+        <!-- <div id="content"></div> -->
+        
+        <!-- Temporary hard-coded HTML -->
+        <header>
+            <address>
+                <img src="../src/img/map-marker.svg" alt="Map marker icon">
+                <p>123 Pine Street, Portland OR |</p>
+                <img src="../src/img/clock.svg" alt="Clock icon">
+                <p>Monday-Friday 10AM - 2PM, Saturday and Sunday 9AM - 2PM |</p>
+                <img src="../src/img/phone.svg" alt="Phone icon">
+                <p>(123) 456-7890</p>
+            </address>
+        </header>
+        <nav class="nav-main">
+            <ul>
+                <li class="home">Home</li>
+                <li class="about">About</li>
+            </ul>
+            <div class="logo">
+                <img src="../src/img/pancakes.png" alt="Pancakes vector art">
+                <h1>Stacks</h1>
+            </div>
+            <ul>
+                <li class="menu">Menu</li>
+                <li class="contact">Contact</li>
+            </ul>
+        </nav>
+        <main>
+            <div class="slideshow">
+                <img
+                    src="../src/img/pancakes.jpg"
+                    alt="Photo of pancakes, fruits, and nuts"
+                >
+                <img
+                    src="../src/img/yogurt-bowl.jpg"
+                    alt="Photo of a yogurt bowl with fruits and grains"
+                >
+                <img
+                    src="../src/img/toasts.jpg"
+                    alt="Photo of various avocado toasts"
+                >
+            </div>
+            <div class="content">
+                <p>Welcome to Stacks!</p>
+                <blockquote>
+                    <p>"Where more<br>is better."</p>
+                </blockquote>
+                <button type="button">Book a table</button>
+            </div>
+            <div class="content-border"></div>
+            <nav class="nav-slideshow">
+                <span data-index="1"></span>
+                <span data-index="2"></span>
+                <span data-index="3"></span>
+            </nav>
+        </main>
+    </body>
+</html>
