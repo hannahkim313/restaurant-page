@@ -1,0 +1,277 @@
+:root {
+    --main-font-color: #7a4b54;
+    --main-font-color-light: #d07f8e;
+    --pink: #fdc8c8;
+    --orange: #fcd09d;
+    --grey: #8c8184;
+    --dark-grey: #685e60;
+    --green: #8ebe6e;
+    --dark-green: #759d5a;
+
+    --box-shadow-thin: 2px 2px 5px #7a4b5454, -2px 2px 5px #7a4b5454;
+}
+
+body {
+    color: var(--main-font-color);
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr;
+}
+
+a {
+    color: var(--main-font-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--main-font-color-light);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+/******************************************************************************/
+/* Selectors for the header start here.
+/******************************************************************************/
+
+header {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+img[src*="svg"] {
+    width: 1rem;
+}
+
+/* Selectors for the address section start here. */
+
+address {
+    font-size: 0.8rem;
+
+    padding: 8px;
+    
+    background-color: var(--orange);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/******************************************************************************/
+/* Selectors for the main navbar start here.
+/******************************************************************************/
+
+.nav-main {
+    background-color: white;
+
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-main ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-main li {
+    list-style: none;
+
+    padding: 16px 32px;
+}
+
+.nav-main .home,
+.nav-main .about,
+.nav-main .menu,
+.nav-main .contact {
+    padding: 24px 32px 16px 32px;
+}
+
+.nav-main .underline {
+    width: 100%;
+    height: 5px;
+
+    background-color: var(--orange);
+    border-radius: 8px;
+
+    display: none;
+}
+
+.nav-main .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img[src*="png"] {
+    width: 56px;
+}
+
+/******************************************************************************/
+/* Selectors for the main section start here.
+/******************************************************************************/
+
+main {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+/* Selectors for the overlay start here. */
+
+.overlay {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(179, 167, 167);
+    opacity: 0.5;
+
+    position: absolute;
+    z-index: 1;
+}
+
+/* Selectors for the slideshow start here. */
+
+.slideshow {
+    width: 100%;
+    height: 100%;
+
+    margin: auto;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    position: absolute;
+}
+
+/* Selectors for the main content start here. */
+
+.content {
+    color: white;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    flex: 5;
+
+    position: absolute;
+
+    z-index: 3;
+}
+
+.content::before {
+    content: "[";
+
+    font-size: 18rem;
+    font-weight: 200;
+
+    position: absolute;
+    left: -75px;
+}
+
+.content::after {
+    content: "]";
+
+    font-size: 18rem;
+    font-weight: 200;
+
+    position: absolute;
+    right: -75px;
+}
+
+.content h1 {
+    font-size: 1.5rem;
+}
+
+.content blockquote {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.content blockquote p:last-child {
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+
+.content button {
+    color: white;
+
+    padding: 4px 12px;
+
+    background-color: var(--green);
+    border: none;
+    border-radius: 16px;
+    box-shadow: var(--box-shadow-thin);
+
+    transition: all 0.4s;
+}
+
+.content button:hover {
+    background-color: var(--dark-green);
+}
+
+/* Selectors for the slideshow navigation start here. */
+
+.nav-slideshow {
+    margin-bottom: 24px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+}
+
+.nav-slideshow span {
+    width: 1rem;
+    height: 1rem;
+
+    background-color: var(--grey);
+    border-radius: 50%;
+
+    display: inline-block;
+}
+
+.nav-slideshow span:hover {
+    background-color: var(--dark-grey);
+    
+    cursor: pointer;
+}
+
+.nav-slideshow span:first-child {
+    background-color: var(--dark-grey);
+}
