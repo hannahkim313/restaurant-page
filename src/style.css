@@ -66,6 +66,10 @@ address {
 
 .nav-main {
     background-color: white;
+    box-shadow: var(--box-shadow-thin);
+
+    position: relative;
+    z-index: 1;
 
     grid-column: 1 / 2;
     grid-row: 2 / 3;
@@ -186,7 +190,7 @@ main {
 
     position: absolute;
 
-    z-index: 3;
+    z-index: 2;
 }
 
 .content::before {
