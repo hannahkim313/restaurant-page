@@ -2,7 +2,7 @@
 /*
 /*   Sections:
 /*
-/*   1. Home page (lines 29-301).
+/*   1. Home page (lines 30-303).
 /*   2. About page
 /*   3. Menu page
 /*   4. Contact page
@@ -22,28 +22,21 @@
     --box-shadow-thin: 2px 2px 5px #7a4b5454, -2px 2px 5px #7a4b5454;
 }
 
-/******************************************************************************/
-/* Selectors for the home page start here.
-/******************************************************************************/
-
-#home-page {
-    width: 100%;
-    height: 100%;
-    
+body {
     color: var(--main-font-color);
-    
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 1fr;
 }
 
 a {
     color: var(--main-font-color);
     text-decoration: none;
+
+    transition: all 0.2s;
 }
 
 a:hover {
     color: var(--main-font-color-light);
+
+    transition: all 0.2s;
 }
 
 button:hover {
@@ -51,8 +44,22 @@ button:hover {
 }
 
 /******************************************************************************/
-/* Selectors for the header start here.
+/* Selectors applicable to all pages start start here.
 /******************************************************************************/
+
+#home-page,
+#about-page,
+#menu-page,
+#contact-page {
+    width: 100%;
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+}
+
+/* Selectors for the header start here. */
 
 header {
     grid-column: 1 / 2;
@@ -78,9 +85,7 @@ address {
     gap: 8px;
 }
 
-/******************************************************************************/
-/* Selectors for the main navbar start here.
-/******************************************************************************/
+/* Selectors for the main navbar start here. */
 
 .nav-main {
     background-color: white;
@@ -141,9 +146,7 @@ img[src*="png"] {
     width: 56px;
 }
 
-/******************************************************************************/
-/* Selectors for the main section start here.
-/******************************************************************************/
+/* Selectors for the main section start here. */
 
 main {
     grid-column: 1 / 2;
@@ -157,9 +160,31 @@ main {
     position: relative;
 }
 
+/* Selectors for the footer start here. */
+
+footer {
+    margin: 16px;
+
+    background-color: white;
+    
+    grid-column: 1 / 1;
+    grid-row: 4 / 5;
+}
+
+footer a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+/******************************************************************************/
+/* Selectors for the home page start start here.
+/******************************************************************************/
+
 /* Selectors for the overlay start here. */
 
-.overlay {
+#home-page .overlay {
     width: 100%;
     height: 100%;
 
@@ -172,7 +197,7 @@ main {
 
 /* Selectors for the slideshow start here. */
 
-.slideshow {
+#home-page .slideshow {
     width: 100%;
     height: 100%;
 
@@ -186,7 +211,7 @@ main {
     z-index: 0;
 }
 
-.slideshow img {
+#home-page .slideshow img {
     width: 100%;
     height: 100%;
 
@@ -197,7 +222,7 @@ main {
 
 /* Selectors for the main content start here. */
 
-.content {
+#home-page .content {
     color: white;
     text-align: center;
 
@@ -213,7 +238,7 @@ main {
     z-index: 2;
 }
 
-.content::before {
+#home-page .content::before {
     content: "[";
 
     font-size: 18rem;
@@ -223,7 +248,7 @@ main {
     left: -75px;
 }
 
-.content::after {
+#home-page .content::after {
     content: "]";
 
     font-size: 18rem;
@@ -233,21 +258,21 @@ main {
     right: -75px;
 }
 
-.content h1 {
+#home-page .content h1 {
     font-size: 1.5rem;
 }
 
-.content blockquote {
+#home-page .content blockquote {
     font-size: 2.5rem;
     font-weight: 700;
 }
 
-.content blockquote p:last-child {
+#home-page .content blockquote p:last-child {
     font-size: 1.5rem;
     font-weight: 200;
 }
 
-.content button {
+#home-page .content button {
     color: white;
 
     padding: 4px 12px;
@@ -260,13 +285,13 @@ main {
     transition: all 0.4s;
 }
 
-.content button:hover {
+#home-page .content button:hover {
     background-color: var(--dark-green);
 }
 
 /* Selectors for the slideshow navigation start here. */
 
-.nav-slideshow {
+#home-page .nav-slideshow {
     margin-bottom: 24px;
 
     display: flex;
@@ -280,7 +305,7 @@ main {
     z-index: 1;
 }
 
-.nav-slideshow span {
+#home-page .nav-slideshow span {
     width: 1rem;
     height: 1rem;
 
@@ -290,12 +315,16 @@ main {
     display: inline-block;
 }
 
-.nav-slideshow span:hover {
+#home-page .nav-slideshow span:hover {
     background-color: var(--dark-grey);
     
     cursor: pointer;
 }
 
-.nav-slideshow span:first-child {
+#home-page .nav-slideshow span:first-child {
     background-color: var(--dark-grey);
 }
+
+/******************************************************************************/
+/* Selectors for the about page start here.
+/******************************************************************************/
