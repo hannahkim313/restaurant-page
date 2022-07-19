@@ -1,1 +1,3 @@
-console.log("This is a test to confirm setup was successful.");
+import { loadHomePage } from "./loadPage";
+
+loadHomePage();
