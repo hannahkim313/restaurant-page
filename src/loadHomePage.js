@@ -151,10 +151,28 @@ const createMainContent = () => {
     homePage.appendChild(main);
 };
 
+const createFooter = () => {
+    const githubIcon = document.createElement("i");
+    githubIcon.setAttribute("class", "fa fa-github");
+    const caption = document.createElement("p");
+    caption.textContent = "Hannah Kim";
+    
+    const link = document.createElement("a");
+    link.setAttribute("href", "https://github.com/hannahkim313");
+    link.append(githubIcon, caption);
+
+    const footer = document.createElement("footer");
+    footer.append(link);
+
+    const homePage = document.querySelector("#home-page");
+    homePage.appendChild(footer);
+};
+
 const loadHomePage = () => {
     createHeader();
     createNavMain();
     createMainContent();
+    createFooter();
 };
 
 export {
