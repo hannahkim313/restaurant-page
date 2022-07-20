@@ -10,7 +10,7 @@ for an imaginary brunch establishment.
 * Use DOM manipulation to dynamically render a webpage
 * Gain a greater understanding of npm by installing packages
 * Organize code using modules
-* Gain a greater understanding of webpack and by loading assets and managing
+* Gain a greater understanding of webpack by loading assets and managing
 output
 
 ## Credits
@@ -22,5 +22,11 @@ output
 * [Toasts photo](https://www.freepik.com/free-photo/toast-with-vegetables_8687632.htm#page=2&query=avocado%20flat%20lay%20toast&position=3&from_view=search) by [Freepik](https://www.freepik.com/author/freepik) on Freepik
 
 * [Breakfast table photo](https://www.freepik.com/free-photo/flat-lay-frame-breakfast-delicacy_8687824.htm#page=2&query=avocado%20flat%20lay%20toast&position=5&from_view=search) by [Freepik](https://www.freepik.com/author/freepik) on Freepik
+
+* [Yelp icon](https://www.flaticon.com/free-icon/yelp_6124987?term=yelp&page=1&position=32&page=1&position=32&related_id=6124987&origin=search) by [Freepik](https://www.flaticon.com/authors/freepik) on Flaticon
+
+* [Instagram icon](https://www.flaticon.com/free-icon/instagram_1384063?related_id=1384063&origin=pack) by [Freepik](https://www.flaticon.com/authors/freepik) on Flaticon
+
+* [Facebook icon](https://www.flaticon.com/premium-icon/facebook_3128304?term=facebook&page=1&position=16&page=1&position=16&related_id=3128304&origin=search) by [Najmunnahar](https://www.flaticon.com/authors/najmunnahar) on Flaticon
 
 * Miscellaneous icons provided by [Material Design Icons](https://materialdesignicons.com/)
