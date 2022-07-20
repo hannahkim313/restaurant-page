@@ -1,7 +1,7 @@
-import { loadHomePage } from "./loadHomePage";
-import { loadAboutPage } from "./loadAboutPage";
-import "./style.css";
-import "./reset.css";
+import { loadHomePage } from "./modules/pages/loadHomePage";
+import { loadAboutPage } from "./modules/pages/loadAboutPage";
+import "./css/style.css";
+import "./css/reset.css";
 
 loadHomePage();
 loadAboutPage();
