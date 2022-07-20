@@ -5,6 +5,18 @@
 This project exercise, created by The Odin Project, is a sample restaurant page
 for an imaginary brunch establishment.
 
+## Future Updates
+
+As I continue to learn more about and practice using webpack, I plan to revisit
+this project and implement the following to improve performance:
+
+* **Code-splitting**
+
+    Currently, some of the fonts are producing asset size limit warning errors
+    when running webpack. One of the ways to reduce file size and optimize web
+    performance is through code-splitting. Once I learn about promises, I plan
+    to go back and implement code-splitting to create dynamic imports.
+
 ## Goals
 
 * Use DOM manipulation to dynamically render a webpage
