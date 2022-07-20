@@ -2,8 +2,9 @@
 /*
 /*   Sections:
 /*
-/*   1. Home page (lines 30-303).
-/*   2. About page
+/*   1. Shared properties across all pages (lines 40-192)
+/*   1. Home page (lines 192-341).
+/*   2. About page (lines 341-390).
 /*   3. Menu page
 /*   4. Contact page
 /*
@@ -29,14 +30,6 @@ body {
 a {
     color: var(--main-font-color);
     text-decoration: none;
-
-    transition: all 0.2s;
-}
-
-a:hover {
-    color: var(--main-font-color-light);
-
-    transition: all 0.2s;
 }
 
 button:hover {
@@ -119,6 +112,16 @@ address {
     padding: 16px 32px;
 }
 
+.nav-main a {
+    transition: all 0.2s;
+}
+
+.nav-main a:hover {
+    color: var(--main-font-color-light);
+
+    transition: all 0.2s;
+}
+
 .nav-main .home,
 .nav-main .about,
 .nav-main .menu,
@@ -145,7 +148,7 @@ address {
     align-items: center;
 }
 
-img[src*="png"] {
+.nav-main img[src*="png"] {
     width: 56px;
 }
 
@@ -179,6 +182,10 @@ footer a {
     justify-content: center;
     align-items: center;
     gap: 8px;
+}
+
+footer img {
+    width: 1rem;
 }
 
 /******************************************************************************/
@@ -315,6 +322,8 @@ footer a {
     background-color: var(--grey);
     border-radius: 50%;
 
+    transition: all 0.2s;
+
     display: inline-block;
 }
 
@@ -376,3 +385,7 @@ footer a {
 #about-page main img[src*="yelp"] {
     width: 1.3rem;
 }
+
+/******************************************************************************/
+/* Selectors for the menu page start here.
+/******************************************************************************/
