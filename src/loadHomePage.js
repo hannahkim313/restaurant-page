@@ -100,7 +100,7 @@ const createNavMain = () => {
     homePage.appendChild(nav);
 };
 
-const createMainContent = () => {
+const createSlideshow = () => {
     const overlay = document.createElement("div");
     overlay.setAttribute("class", "overlay");
 
@@ -171,7 +171,7 @@ const createFooter = () => {
 const loadHomePage = () => {
     createHeader();
     createNavMain();
-    createMainContent();
+    createSlideshow();
     createFooter();
 };
 
