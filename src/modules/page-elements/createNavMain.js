@@ -1,3 +1,5 @@
+import logoImg from "../../img/pancakes.png";
+
 const createNavMain = () => {
     const home = () => {
         const homeLink = document.createElement("a");
@@ -24,12 +26,12 @@ const createNavMain = () => {
     };
 
     const logo = () => {
-        const logoImg = document.createElement("img");
-        logoImg.src = "../src/img/pancakes.png";
-        logoImg.alt = "Pancakes vector art";
+        const logoIcon = document.createElement("img");
+        logoIcon.src = logoImg;
+        logoIcon.alt = "Pancakes vector art";
         const logoLink = document.createElement("a");
         logoLink.setAttribute("href", "#");
-        logoLink.appendChild(logoImg);
+        logoLink.appendChild(logoIcon);
         const logo = document.createElement("li");
         logo.setAttribute("class", "logo");
         logo.appendChild(logoLink);

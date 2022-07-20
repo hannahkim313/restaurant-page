@@ -2,6 +2,9 @@ import { createPage } from "../page-elements/createPage";
 import { createHeader } from "../page-elements/createHeader";
 import { createNavMain } from "../page-elements/createNavMain";
 import { createFooter } from "../page-elements/createFooter";
+import yelpImg from "../../img/yelp.png";
+import facebookImg from "../../img/facebook.png";
+import instagramImg from "../../img/instagram.png";
     
 const createMainContent = () => {
     const content = () => {
@@ -49,7 +52,7 @@ const createMainContent = () => {
     const socials = () => {
         const yelp = () => {
             const yelpIcon = document.createElement("img");
-            yelpIcon.src = "../src/img/yelp.png";
+            yelpIcon.src = yelpImg;
             yelpIcon.alt = "Yelp icon";
             const yelpLink = document.createElement("a");
             yelpLink.setAttribute("href", "#");
@@ -61,7 +64,7 @@ const createMainContent = () => {
     
         const facebook = () => {
             const facebookIcon = document.createElement("img");
-            facebookIcon.src = "../src/img/facebook.png";
+            facebookIcon.src = facebookImg;
             facebookIcon.alt = "Facebook icon";
             const facebookLink = document.createElement("a");
             facebookLink.setAttribute("href", "#");
@@ -73,7 +76,7 @@ const createMainContent = () => {
     
         const instagram = () => {
             const instagramIcon = document.createElement("img");
-            instagramIcon.src = "../src/img/instagram.png";
+            instagramIcon.src = instagramImg;
             instagramIcon.alt = "Instagram icon";
             const instagramLink = document.createElement("a");
             instagramLink.setAttribute("href", "#");

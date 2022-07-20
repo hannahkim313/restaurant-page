@@ -1,7 +1,11 @@
+import mapMarkerImg from "../../img/map-marker.svg";
+import clockImg from "../../img/clock.svg";
+import phoneImg from "../../img/phone.svg";
+
 const createHeader = () => {
     const mapIcon = () => {
         const mapIcon = document.createElement("img");
-        mapIcon.src = "../src/img/map-marker.svg";
+        mapIcon.src = mapMarkerImg;
         mapIcon.alt = "Map marker icon";
         return mapIcon;
     };
@@ -19,7 +23,7 @@ const createHeader = () => {
     
     const clockIcon = () => {
         const clockIcon = document.createElement("img");
-        clockIcon.src = "../src/img/clock.svg";
+        clockIcon.src = clockImg;
         clockIcon.alt = "Clock icon";
         return clockIcon;
     };
@@ -32,7 +36,7 @@ const createHeader = () => {
 
     const phoneIcon = () => {
         const phoneIcon = document.createElement("img");
-        phoneIcon.src = "../src/img/phone.svg";
+        phoneIcon.src = phoneImg;
         phoneIcon.alt = "Phone icon";
         return phoneIcon;
     };

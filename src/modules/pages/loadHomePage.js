@@ -1,6 +1,9 @@
 import { createHeader } from "../page-elements/createHeader";
 import { createNavMain } from "../page-elements/createNavMain";
 import { createFooter } from "../page-elements/createFooter";
+import breakfastTableImg from "../../img/breakfast-table.jpg";
+import toastsImg from "../../img/toasts.jpg";
+import pancakesImg from "../../img/pancakes.jpg";
 
 const createSlideshow = () => {
     const overlay = () => {
@@ -12,15 +15,15 @@ const createSlideshow = () => {
     const createImg = (name) => {
         const img = document.createElement("img");
         if (name === "table") {
-            img.src = "../src/img/breakfast-table.jpg";
+            img.src = breakfastTableImg;
             img.alt = "Photo of a table full of breakfast dishes";
         }
         if (name === "toasts") {
-            img.src = "../src/img/toasts.jpg";
+            img.src = toastsImg;
             img.alt = "Photo of various avocado toasts";
         }
         if (name === "pancakes") {
-            img.src = "../src/img/pancakes.jpg";
+            img.src = pancakesImg;
             img.alt = "Photo of pancakes, fruits, and chocolate";
         }
         return img;

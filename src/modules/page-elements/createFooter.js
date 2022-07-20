@@ -1,7 +1,9 @@
+import githubImg from "../../img/github.png";
+
 const createFooter = () => {
     const content = () => {
         const githubIcon = document.createElement("img");
-        githubIcon.src = "../src/img/github.png";
+        githubIcon.src = githubImg;
         githubIcon.alt = "Github icon";
         const caption = document.createElement("p");
         caption.textContent = "Hannah Kim";
