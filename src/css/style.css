@@ -2,11 +2,11 @@
 /*
 /*   Sections:
 /*
-/*   1. Shared properties across all pages (lines 40-192)
-/*   1. Home page (lines 192-341).
-/*   2. About page (lines 341-390).
-/*   3. Menu page
-/*   4. Contact page
+/*   1. Shared properties across all pages (lines 41-212).
+/*   2. Home page (lines 212-360).
+/*   3. About page (lines 360-390).
+/*   4. Menu page (lines 390-439).
+/*   5. Contact page
 /*
 /******************************************************************************/
 
@@ -14,6 +14,7 @@
     --main-font-color: #7a4b54;
     --main-font-color-light: #d07f8e;
     --pink: #fdc8c8;
+    --light-orange: #faefe3;
     --orange: #fcd09d;
     --grey: #8c8184;
     --dark-grey: #685e60;
@@ -166,6 +167,25 @@ main {
     position: relative;
 }
 
+main .socials {
+    list-style: none;
+
+    margin: 16px 32px 32px 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+main .socials img {
+    width: 1.5rem;
+}
+
+main .socials img[src*="yelp"] {
+    width: 1.3rem;
+}
+
 /* Selectors for the footer start here. */
 
 footer {
@@ -244,7 +264,6 @@ footer img {
     flex: 5;
 
     position: absolute;
-
     z-index: 2;
 }
 
@@ -350,7 +369,7 @@ footer img {
     margin: 40px 32px 16px 32px;
     padding: 32px;
 
-    background-color: #faefe3;
+    background-color: var(--light-orange);
     border-radius: 8px;
 
     display: flex;
@@ -362,30 +381,60 @@ footer img {
 
 #about-page .content-divider {
     width: 15%;
-    height: 2px;
+    height: 1px;
 
     background-color: var(--main-font-color);
 }
 
-#about-page main ul {
-    list-style: none;
+/******************************************************************************/
+/* Selectors for the menu page start here.
+/******************************************************************************/
 
-    margin: 16px 32px 32px 32px;
+#menu-page main .menu {
+    width: max(300px, 45%);
+    text-align: center;
+
+    margin: 58px 32px 24px 32px;
+    padding: 32px;
+
+    background-color: var(--light-orange);
+    border: 2px solid var(--main-font-color);
+    outline: 16px solid var(--light-orange);
+    border-radius: 8px;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 16px;
 }
 
-#about-page main img {
-    width: 1.5rem;
+#menu-page .content-divider {
+    width: 30%;
+    height: 1px;
+
+    background-color: var(--main-font-color);
 }
 
-#about-page main img[src*="yelp"] {
-    width: 1.3rem;
+#menu-page .breakfast,
+#menu-page .lunch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#menu-page .menu-items {
+    width: clamp(150px, 75%, 50ch);
+            
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
 }
 
 /******************************************************************************/
-/* Selectors for the menu page start here.
+/* Selectors for the contact page start here.
 /******************************************************************************/
