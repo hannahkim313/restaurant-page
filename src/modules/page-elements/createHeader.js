@@ -17,8 +17,9 @@ const createHeader = () => {
     };
     
     const createDivider = () => {
-        const dividerOne = document.createElement("p");
-        dividerOne.textContent = "|";
+        const divider = document.createElement("p");
+        divider.textContent = "|";
+        return divider;
     };
     
     const clockIcon = () => {
