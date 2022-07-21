@@ -87,6 +87,7 @@ const createMainContent = () => {
         };
     
         const socials = document.createElement("ul");
+        socials.setAttribute("class", "socials");
         socials.append(yelp(), facebook(), instagram());
         return socials;
     };
