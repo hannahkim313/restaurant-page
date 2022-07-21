@@ -1,6 +1,6 @@
-import { createHeader } from "../page-elements/createHeader";
-import { createNavMain } from "../page-elements/createNavMain";
-import { createFooter } from "../page-elements/createFooter";
+import { createHeader } from "../page-elements/header";
+import { createNavMain } from "../page-elements/nav-main";
+import { createFooter } from "../page-elements/footer";
 import breakfastTableImg from "../../img/breakfast-table.jpg";
 import toastsImg from "../../img/toasts.jpg";
 import pancakesImg from "../../img/pancakes.jpg";

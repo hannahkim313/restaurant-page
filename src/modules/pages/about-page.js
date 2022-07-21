@@ -1,7 +1,7 @@
-import { createPage } from "../page-elements/createPage";
-import { createHeader } from "../page-elements/createHeader";
-import { createNavMain } from "../page-elements/createNavMain";
-import { createFooter } from "../page-elements/createFooter";
+import { createPage } from "../page-elements/page";
+import { createHeader } from "../page-elements/header";
+import { createNavMain } from "../page-elements/nav-main";
+import { createFooter } from "../page-elements/footer";
 import yelpImg from "../../img/yelp.png";
 import facebookImg from "../../img/facebook.png";
 import instagramImg from "../../img/instagram.png";
