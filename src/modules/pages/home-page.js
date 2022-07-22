@@ -5,7 +5,7 @@ import breakfastTableImg from "../../img/breakfast-table.jpg";
 import toastsImg from "../../img/toasts.jpg";
 import pancakesImg from "../../img/pancakes.jpg";
 
-const createSlideshow = () => {
+const createMainContent = () => {
     const createOverlay = () => {
         const overlay = document.createElement("div");
         overlay.setAttribute("class", "overlay");
@@ -98,7 +98,6 @@ const createSlideshow = () => {
         createContent(),
         createNavSlideshow()
     );
-
     return main;
 };
 
@@ -107,7 +106,7 @@ const loadHomePage = () => {
     homePage.append(
         createHeader(),
         createNavMain(),
-        createSlideshow(),
+        createMainContent(),
         createFooter()
     );
 };

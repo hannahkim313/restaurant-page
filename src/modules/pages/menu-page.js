@@ -2,38 +2,26 @@ import { createPage } from "../page-elements/page";
 import { createHeader } from "../page-elements/header";
 import { createNavMain } from "../page-elements/nav-main";
 import { createFooter } from "../page-elements/footer";
-import yelpImg from "../../img/yelp.png";
-import facebookImg from "../../img/facebook.png";
-import instagramImg from "../../img/instagram.png";
+import { createContentDivider } from "../page-elements/content-divider";
+import { createSocials } from "../page-elements/socials";
+import { createPageTitle } from "../page-elements/page-title";
 
 const createMainContent = () => {
     const createMenu = () => {
-        const createMenuTitle = () => {
-            const title = document.createElement("h2");
-            title.textContent = "Menu";
-            return title;
-        };
-
-        const createDivider = () => {
-            const divider = document.createElement("div");
-            divider.setAttribute("class", "content-divider");
-            return divider;
-        };
-
         const createDish = (meal, itemNum) => {
             const createDishName = () => {
                 const dishName = document.createElement("h4");
                 if (meal === "breakfast") {
-                    dishName.textContent = itemNum === "one" ? "House Pancakes 13"
-                    : itemNum === "two" ? "Avocado Toast 12"
-                    : itemNum === "three" ? "Sunshine Skillet 16"
-                    : "The Better Benedict 16";
+                    if (itemNum === "one") dishName.textContent = "House Pancakes 13";
+                    if (itemNum === "two") dishName.textContent = "Avocado Toast 12";
+                    if (itemNum === "three") dishName.textContent = "Sunshine Skillet 16";
+                    if (itemNum === "four") dishName.textContent = "The Better Benedict 16";
                 }
                 if (meal === "lunch") {
-                    dishName.textContent = itemNum === "one" ? "Veggie Sandwich 13"
-                    : itemNum === "two" ? "French Onion Soup 9"
-                    : itemNum === "three" ? "Stacked Burger 18"
-                    : "House Salad 14";
+                    if (itemNum === "one") dishName.textContent = "Veggie Sandwich 13";
+                    if (itemNum === "two") dishName.textContent = "French Onion Soup 9";
+                    if (itemNum === "three") dishName.textContent = "Stacked Burger 18";
+                    if (itemNum === "four") dishName.textContent = "House Salad 14";
                 }
                 return dishName;
             };
@@ -51,7 +39,7 @@ const createMainContent = () => {
             dish.setAttribute("class", `dish ${itemNum}`);
             dish.append(createDishName(), createDishInfo());
             return dish;
-        }
+        };
 
         const createMenuItems = (meal) => {
             const menuItems = document.createElement("div");
@@ -84,60 +72,13 @@ const createMainContent = () => {
         const menu = document.createElement("section");
         menu.setAttribute("class", "menu");
         menu.append(
-            createMenuTitle(),
-            createDivider(),
+            createPageTitle("menu"),
+            createContentDivider(),
             createMealArticle("breakfast"),
-            createDivider(),
+            createContentDivider(),
             createMealArticle("lunch")
         );
         return menu;
-    };
-
-    const createSocials = () => {
-        const createYelp = () => {
-            const yelpIcon = document.createElement("img");
-            yelpIcon.src = yelpImg;
-            yelpIcon.alt = "Yelp icon";
-            const yelpLink = document.createElement("a");
-            yelpLink.setAttribute("href", "#");
-            yelpLink.appendChild(yelpIcon);
-            const yelp = document.createElement("li");
-            yelp.appendChild(yelpLink);
-            return yelp;
-        };
-    
-        const createFacebook = () => {
-            const facebookIcon = document.createElement("img");
-            facebookIcon.src = facebookImg;
-            facebookIcon.alt = "Facebook icon";
-            const facebookLink = document.createElement("a");
-            facebookLink.setAttribute("href", "#");
-            facebookLink.appendChild(facebookIcon);
-            const facebook = document.createElement("li");
-            facebook.appendChild(facebookLink);
-            return facebook;
-        };
-    
-        const createInstagram = () => {
-            const instagramIcon = document.createElement("img");
-            instagramIcon.src = instagramImg;
-            instagramIcon.alt = "Instagram icon";
-            const instagramLink = document.createElement("a");
-            instagramLink.setAttribute("href", "#");
-            instagramLink.appendChild(instagramIcon);
-            const instagram = document.createElement("li");
-            instagram.appendChild(instagramLink);
-            return instagram;
-        };
-    
-        const socials = document.createElement("ul");
-        socials.setAttribute("class", "socials");
-        socials.append(
-            createYelp(),
-            createFacebook(),
-            createInstagram()
-        );
-        return socials;
     };
 
     const main = document.createElement("main");

@@ -2,24 +2,12 @@ import { createPage } from "../page-elements/page";
 import { createHeader } from "../page-elements/header";
 import { createNavMain } from "../page-elements/nav-main";
 import { createFooter } from "../page-elements/footer";
-import yelpImg from "../../img/yelp.png";
-import facebookImg from "../../img/facebook.png";
-import instagramImg from "../../img/instagram.png";
+import { createContentDivider } from "../page-elements/content-divider";
+import { createSocials } from "../page-elements/socials";
+import { createPageTitle } from "../page-elements/page-title";
 
 const createMainContent = () => {
     const createContent = () => {
-        const createTitle = () => {
-            const title = document.createElement("h2");
-            title.textContent = "Contact Us";
-            return title;
-        };
-
-        const createDivider = () => {
-            const divider = document.createElement("div");
-            divider.setAttribute("class", "content-divider");
-            return divider;
-        };
-
         const createDescription = () => {
             const text = document.createElement("p");
             text.textContent = "We'd love to hear from you!";
@@ -121,59 +109,12 @@ const createMainContent = () => {
         const content = document.createElement("section");
         content.setAttribute("class", "content");
         content.append(
-            createTitle(),
-            createDivider(),
+            createPageTitle("contact"),
+            createContentDivider(),
             createDescription(),
             createForm()
         );
         return content;
-    };
-
-    const createSocials = () => {
-        const createYelp = () => {
-            const yelpIcon = document.createElement("img");
-            yelpIcon.src = yelpImg;
-            yelpIcon.alt = "Yelp icon";
-            const yelpLink = document.createElement("a");
-            yelpLink.setAttribute("href", "#");
-            yelpLink.appendChild(yelpIcon);
-            const yelp = document.createElement("li");
-            yelp.appendChild(yelpLink);
-            return yelp;
-        };
-    
-        const createFacebook = () => {
-            const facebookIcon = document.createElement("img");
-            facebookIcon.src = facebookImg;
-            facebookIcon.alt = "Facebook icon";
-            const facebookLink = document.createElement("a");
-            facebookLink.setAttribute("href", "#");
-            facebookLink.appendChild(facebookIcon);
-            const facebook = document.createElement("li");
-            facebook.appendChild(facebookLink);
-            return facebook;
-        };
-    
-        const createInstagram = () => {
-            const instagramIcon = document.createElement("img");
-            instagramIcon.src = instagramImg;
-            instagramIcon.alt = "Instagram icon";
-            const instagramLink = document.createElement("a");
-            instagramLink.setAttribute("href", "#");
-            instagramLink.appendChild(instagramIcon);
-            const instagram = document.createElement("li");
-            instagram.appendChild(instagramLink);
-            return instagram;
-        };
-    
-        const socials = document.createElement("ul");
-        socials.setAttribute("class", "socials");
-        socials.append(
-            createYelp(),
-            createFacebook(),
-            createInstagram()
-        );
-        return socials;
     };
 
     const main = document.createElement("main");
