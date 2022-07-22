@@ -2,11 +2,11 @@
 /*
 /*   Sections:
 /*
-/*   1. Shared properties across all pages (lines 41-212).
-/*   2. Home page (lines 212-360).
-/*   3. About page (lines 360-390).
-/*   4. Menu page (lines 390-439).
-/*   5. Contact page
+/*   1. Shared properties across all pages (lines 44-209).
+/*   2. Home page (lines 217-357).
+/*   3. About page (lines 363-387).
+/*   4. Menu page (lines 393-436).
+/*   5. Contact page (lines 442-555).
 /*
 /******************************************************************************/
 
@@ -438,3 +438,118 @@ footer img {
 /******************************************************************************/
 /* Selectors for the contact page start here.
 /******************************************************************************/
+
+#contact-page .content {
+    width: 300px;
+
+    margin: 40px 32px 24px 32px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#contact-page .description {
+    text-align: center;
+}
+
+#contact-page .content-divider {
+    width: 15%;
+    height: 1px;
+
+    background-color: var(--main-font-color);
+}
+
+/* Selectors for the form start here. */
+
+#contact-page form {
+    width: 300px;
+
+    margin-top: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+#contact-page form *:not(button) {
+    width: 100%;
+}
+
+#contact-page form .field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#contact-page form img[src*="asterisk"] {
+    width: 0.6rem;
+    
+    margin-bottom: 4px;
+}
+
+#contact-page form label {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#contact-page input,
+#contact-page textarea {
+    color: #4f3035;
+    
+    padding: 4px 0 4px 8px;
+
+    background-color: #f5f1ed;
+    border: none;
+    border-radius: 8px;
+}
+
+#contact-page form textarea {
+    resize: none;
+}
+
+#contact-page input:focus,
+#contact-page textarea:focus {
+    outline: 2px solid var(--main-font-color);
+}
+
+#contact-page input:focus:required:valid,
+#contact-page textarea:focus:required:valid {
+    outline: 2px solid var(--dark-green);
+}
+
+#contact-page input:focus:required:invalid,
+#contact-page textarea:focus:required:invalid {
+    outline: 2px solid #d07f8e;
+}
+
+/* Selectors for the submit button start here. */
+
+#contact-page form button {
+    color: white;
+
+    padding: 4px 24px;
+    margin-top: 16px;
+
+    background-color: var(--main-font-color);
+    border: none;
+    border-radius: 16px;
+
+    transition: all 0.4s;
+}
+
+#contact-page form button:not(:disabled):hover {
+    background-color: #a0626d;
+
+    transition: all 0.4s;
+}
+
+#contact-page form button:disabled {
+    cursor:not-allowed;
+    opacity: 0.5;
+}
