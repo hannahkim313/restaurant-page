@@ -81,7 +81,7 @@ const createMainContent = () => {
             return article;
         };
 
-        const menu = document.createElement("div");
+        const menu = document.createElement("section");
         menu.setAttribute("class", "menu");
         menu.append(
             createMenuTitle(),
