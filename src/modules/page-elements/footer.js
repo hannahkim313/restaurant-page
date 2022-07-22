@@ -1,7 +1,7 @@
 import githubImg from "../../img/github.png";
 
 const createFooter = () => {
-    const content = () => {
+    const createContent = () => {
         const githubIcon = document.createElement("img");
         githubIcon.src = githubImg;
         githubIcon.alt = "Github icon";
@@ -14,7 +14,7 @@ const createFooter = () => {
     };
 
     const footer = document.createElement("footer");
-    footer.appendChild(content());
+    footer.appendChild(createContent());
     return footer;
 };
 

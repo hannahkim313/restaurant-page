@@ -3,14 +3,14 @@ import clockImg from "../../img/clock.svg";
 import phoneImg from "../../img/phone.svg";
 
 const createHeader = () => {
-    const mapIcon = () => {
+    const createMapIcon = () => {
         const mapIcon = document.createElement("img");
         mapIcon.src = mapMarkerImg;
         mapIcon.alt = "Map marker icon";
         return mapIcon;
     };
 
-    const mapInfo = () => {
+    const createMapInfo = () => {
         const mapInfo = document.createElement("p");
         mapInfo.textContent = "123 Pine Street, Portland OR";
         return mapInfo;
@@ -22,27 +22,27 @@ const createHeader = () => {
         return divider;
     };
     
-    const clockIcon = () => {
+    const createClockIcon = () => {
         const clockIcon = document.createElement("img");
         clockIcon.src = clockImg;
         clockIcon.alt = "Clock icon";
         return clockIcon;
     };
     
-    const hours = () => {
+    const createHours = () => {
         const hours = document.createElement("p");
         hours.textContent = "Monday - Friday 10AM - 2PM, Saturday and Sunday 9AM - 2PM";
         return hours;
     };
 
-    const phoneIcon = () => {
+    const createPhoneIcon = () => {
         const phoneIcon = document.createElement("img");
         phoneIcon.src = phoneImg;
         phoneIcon.alt = "Phone icon";
         return phoneIcon;
     };
 
-    const phoneNumber = () => {
+    const createPhoneNumber = () => {
         const phoneNumber = document.createElement("p");
         phoneNumber.textContent = "(123) 456-7890";
         return phoneNumber;
@@ -50,14 +50,14 @@ const createHeader = () => {
     
     const address = document.createElement("address");
     address.append(
-        mapIcon(),
-        mapInfo(),
+        createMapIcon(),
+        createMapInfo(),
         createDivider(),
-        clockIcon(),
-        hours(),
+        createClockIcon(),
+        createHours(),
         createDivider(),
-        phoneIcon(),
-        phoneNumber()
+        createPhoneIcon(),
+        createPhoneNumber()
     );
     
     const header = document.createElement("header");

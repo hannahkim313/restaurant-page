@@ -7,20 +7,20 @@ import facebookImg from "../../img/facebook.png";
 import instagramImg from "../../img/instagram.png";
     
 const createMainContent = () => {
-    const content = () => {
-        const title = () => {
+    const createContent = () => {
+        const createTitle = () => {
             const title = document.createElement("h2");
             title.textContent = "Who We Are";
             return title;
         };
         
-        const divider = () => {
+        const createDivider = () => {
             const divider = document.createElement("div");
             divider.setAttribute("class", "content-divider");
             return divider;
         };
 
-        const captionOne = () => {
+        const createCaptionOne = () => {
             const captionOne = document.createElement("p");
             captionOne.textContent = `Lorem ipsum, dolor sit amet consectetur 
             adipisicing elit. Nostrum dignissimos error architecto corrupti 
@@ -32,9 +32,9 @@ const createMainContent = () => {
             return captionOne;
         };
 
-        const br = () => document.createElement("br");
+        const createBreak = () => document.createElement("br");
 
-        const captionTwo = () => {
+        const createCaptionTwo = () => {
             const captionTwo = document.createElement("p");
             captionTwo.textContent = `Lorem ipsum dolor sit amet consectetur 
             adipisicing elit. Quis dolore corporis placeat dolorum exercitationem 
@@ -45,12 +45,18 @@ const createMainContent = () => {
 
         const content = document.createElement("section");
         content.setAttribute("class", "content");
-        content.append(title(), divider(), captionOne(), br(), captionTwo());
+        content.append(
+            createTitle(),
+            createDivider(),
+            createCaptionOne(),
+            createBreak(),
+            createCaptionTwo()
+        );
         return content;
     };
 
-    const socials = () => {
-        const yelp = () => {
+    const createSocials = () => {
+        const createYelp = () => {
             const yelpIcon = document.createElement("img");
             yelpIcon.src = yelpImg;
             yelpIcon.alt = "Yelp icon";
@@ -62,7 +68,7 @@ const createMainContent = () => {
             return yelp;
         };
     
-        const facebook = () => {
+        const createFacebook = () => {
             const facebookIcon = document.createElement("img");
             facebookIcon.src = facebookImg;
             facebookIcon.alt = "Facebook icon";
@@ -74,7 +80,7 @@ const createMainContent = () => {
             return facebook;
         };
     
-        const instagram = () => {
+        const createInstagram = () => {
             const instagramIcon = document.createElement("img");
             instagramIcon.src = instagramImg;
             instagramIcon.alt = "Instagram icon";
@@ -88,12 +94,16 @@ const createMainContent = () => {
     
         const socials = document.createElement("ul");
         socials.setAttribute("class", "socials");
-        socials.append(yelp(), facebook(), instagram());
+        socials.append(
+            createYelp(),
+            createFacebook(),
+            createInstagram()
+        );
         return socials;
     };
 
     const main = document.createElement("main");
-    main.append(content(), socials());
+    main.append(createContent(), createSocials());
     return main;
 };
 

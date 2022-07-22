@@ -1,7 +1,7 @@
 import logoImg from "../../img/pancakes.png";
 
 const createNavMain = () => {
-    const home = () => {
+    const createHome = () => {
         const homeLink = document.createElement("a");
         homeLink.setAttribute("href", "#");
         homeLink.textContent = "Home";
@@ -13,7 +13,7 @@ const createNavMain = () => {
         return home;
     };
     
-    const about = () => {
+    const createAbout = () => {
         const aboutLink = document.createElement("a");
         aboutLink.setAttribute("href", "#");
         aboutLink.textContent = "About";
@@ -25,7 +25,7 @@ const createNavMain = () => {
         return about;
     };
 
-    const logo = () => {
+    const createLogo = () => {
         const logoIcon = document.createElement("img");
         logoIcon.src = logoImg;
         logoIcon.alt = "Pancakes vector art";
@@ -38,7 +38,7 @@ const createNavMain = () => {
         return logo;
     };
 
-    const menu = () => {
+    const createMenu = () => {
         const menuLink = document.createElement("a");
         menuLink.setAttribute("href", "#");
         menuLink.textContent = "Menu";
@@ -50,7 +50,7 @@ const createNavMain = () => {
         return menu;
     };
 
-    const contact = () => {
+    const createContact = () => {
         const contactLink = document.createElement("a");
         contactLink.setAttribute("href", "#");
         contactLink.textContent = "Contact";
@@ -62,15 +62,21 @@ const createNavMain = () => {
         return contact;
     };
 
-    const links = () => {
+    const createLinks = () => {
         const links = document.createElement("ul");
-        links.append(home(), about(), logo(), menu(), contact());
+        links.append(
+            createHome(),
+            createAbout(),
+            createLogo(),
+            createMenu(),
+            createContact()
+        );
         return links;
     };
 
     const nav = document.createElement("nav");
     nav.setAttribute("class", "nav-main");
-    nav.appendChild(links());
+    nav.appendChild(createLinks());
     return nav;
 };
 
