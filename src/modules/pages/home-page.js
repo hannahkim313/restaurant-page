@@ -1,6 +1,7 @@
 import { createHeader } from "../page-elements/header";
 import { createNavMain } from "../page-elements/nav-main";
 import { createFooter } from "../page-elements/footer";
+import { showSlide } from "../page-functionalities/home-page-functionality";
 import breakfastTableImg from "../../img/breakfast-table.jpg";
 import toastsImg from "../../img/toasts.jpg";
 import pancakesImg from "../../img/pancakes.jpg";
@@ -14,17 +15,18 @@ const createMainContent = () => {
 
     const createImg = (name) => {
         const img = document.createElement("img");
-        if (name === "table") {
-            img.src = breakfastTableImg;
-            img.alt = "Photo of a table full of breakfast dishes";
+        img.setAttribute("class", "slide");
+        if (name === "pancakes") {
+            img.src = pancakesImg;
+            img.alt = "Photo of pancakes, fruits, and chocolate";
         }
         if (name === "toasts") {
             img.src = toastsImg;
             img.alt = "Photo of various avocado toasts";
         }
-        if (name === "pancakes") {
-            img.src = pancakesImg;
-            img.alt = "Photo of pancakes, fruits, and chocolate";
+        if (name === "table") {
+            img.src = breakfastTableImg;
+            img.alt = "Photo of a table full of breakfast dishes";
         }
         return img;
     };
@@ -33,9 +35,9 @@ const createMainContent = () => {
         const slideshow = document.createElement("div");
         slideshow.setAttribute("class", "slideshow");
         slideshow.append(
-            createImg("table"),
+            createImg("pancakes"),
             createImg("toasts"),
-            createImg("pancakes")
+            createImg("table")
         );
         return slideshow;
     };
@@ -109,6 +111,7 @@ const loadHomePage = () => {
         createMainContent(),
         createFooter()
     );
+    showSlide();
 };
 
 export {
