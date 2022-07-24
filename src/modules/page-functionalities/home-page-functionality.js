@@ -1,6 +1,5 @@
-let slideIndex = 0;
-
 const showSlide = () => {
+    let slideIndex = 0;
     const slides = document.querySelectorAll(".slide");
     for (const slide of slides) {
         slide.style.display = "none";
