@@ -13,7 +13,7 @@ const showSlide = () => {
     if (slideIndex > slides.length) slideIndex = 1;
     slides[slideIndex - 1].style.display = "block";
     navDots[slideIndex - 1].style.backgroundColor = "var(--dark-grey)";
-    setTimeout(() => showSlide(slideIndex), 7000);
+    setTimeout(() => showSlide(slideIndex), 5000);
 };
 
 export {
