@@ -1,4 +1,4 @@
-import githubImg from "../../img/github.png";
+import githubImg from "../../img/github.svg";
 
 const createFooter = () => {
     const createContent = () => {
