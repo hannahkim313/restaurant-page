@@ -1,20 +1,28 @@
-const getActiveLink = () => {
-    const links = document.querySelectorAll(".nav-main a");
-    for (const link of links) {
-        const linkProps = window.getComputedStyle(link);
-        if (linkProps.getPropertyValue("color") === "rgb(208, 127, 142)") return link;
-    }
-};
-
 const animateNavMain = () => {
+    let activeLink = document.querySelector(".nav-main .home a");
+
+    const makeActive = (link) => {
+        activeLink.style.color = "var(--main-font-color)";
+        const activeUnderline = activeLink.nextElementSibling;
+        activeUnderline.style.backgroundColor = "white";
+        link.style.color = "var(--main-font-color-light)";
+        const underline = link.nextElementSibling;
+        underline.style.backgroundColor = "var(--orange)";
+    };
+
     const links = document.querySelectorAll(".nav-main a");
     for (const link of links) {
         link.addEventListener("click", () => {
-            const activeLink = getActiveLink();
             if (link !== activeLink) {
-                link.style.color = "var(--main-font-color-light)";
-                activeLink.style.color = "var(--main-font-color)";
+                makeActive(link);
+                activeLink = link;
             }
+        });
+        link.addEventListener("mouseover", () => {
+            link.style.color = "var(--main-font-color-light)";
+        });
+        link.addEventListener("mouseout", () => {
+            if (link !== activeLink) link.style.color = "var(--main-font-color)";
         });
     }
 };

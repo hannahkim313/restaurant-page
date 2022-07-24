@@ -126,8 +126,6 @@ address {
 }
 
 .nav-main a:hover {
-    color: var(--main-font-color-light);
-
     transition: all 0.2s;
 }
 
@@ -141,6 +139,8 @@ address {
 
     background-color: white;
     border-radius: 8px;
+
+    transition: all 0.2s;
 }
 
 .nav-main .home .underline {
