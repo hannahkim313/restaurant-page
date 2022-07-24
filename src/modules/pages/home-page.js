@@ -2,6 +2,7 @@ import { createHeader } from "../page-elements/header";
 import { createNavMain } from "../page-elements/nav-main";
 import { createFooter } from "../page-elements/footer";
 import { showSlide } from "../page-functionalities/home-page-functionality";
+import { animateNavMain } from "../page-functionalities/nav-main-functionality";
 import breakfastTableImg from "../../img/breakfast-table.jpg";
 import toastsImg from "../../img/toasts.jpg";
 import pancakesImg from "../../img/pancakes.jpg";
@@ -112,6 +113,7 @@ const loadHomePage = () => {
         createFooter()
     );
     showSlide();
+    animateNavMain();
 };
 
 export {

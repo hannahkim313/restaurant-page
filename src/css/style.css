@@ -114,6 +114,13 @@ address {
     padding: 16px 32px;
 }
 
+.nav-main .home,
+.nav-main .about,
+.nav-main .menu,
+.nav-main .contact {
+    padding: 24px 32px 16px 32px;
+}
+
 .nav-main a {
     transition: all 0.2s;
 }
@@ -124,11 +131,8 @@ address {
     transition: all 0.2s;
 }
 
-.nav-main .home,
-.nav-main .about,
-.nav-main .menu,
-.nav-main .contact {
-    padding: 24px 32px 16px 32px;
+.nav-main .home a {
+    color: var(--main-font-color-light);
 }
 
 .nav-main .underline {
