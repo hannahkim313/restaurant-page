@@ -1,7 +1,4 @@
 import { createPage } from "../page-elements/page";
-import { createHeader } from "../page-elements/header";
-import { createNavMain } from "../page-elements/nav-main";
-import { createFooter } from "../page-elements/footer";
 import { createContentDivider } from "../page-elements/content-divider";
 import { createSocials } from "../page-elements/socials";
 import { createPageTitle } from "../page-elements/page-title";
@@ -52,16 +49,12 @@ const createMainContent = () => {
     return main;
 };
 
-const loadAboutPage = () => {
+const createAboutPage = () => {
     const aboutPage = createPage("about");
-    aboutPage.append(
-        createHeader(),
-        createNavMain(),
-        createMainContent(),
-        createFooter()
-    );
+    aboutPage.appendChild(createMainContent());
+    return aboutPage;
 };
 
 export {
-    loadAboutPage
+    createAboutPage
 };

@@ -1,8 +1,5 @@
-import { createHeader } from "../page-elements/header";
-import { createNavMain } from "../page-elements/nav-main";
-import { createFooter } from "../page-elements/footer";
+import { createPage } from "../page-elements/page";
 import { showSlide } from "../page-functionalities/home-page-functionality";
-import { animateNavMain } from "../page-functionalities/nav-main-functionality";
 import breakfastTableImg from "../../img/breakfast-table.jpg";
 import toastsImg from "../../img/toasts.jpg";
 import pancakesImg from "../../img/pancakes.jpg";
@@ -104,18 +101,13 @@ const createMainContent = () => {
     return main;
 };
 
-const loadHomePage = () => {
-    const homePage = document.querySelector("#home-page");
-    homePage.append(
-        createHeader(),
-        createNavMain(),
-        createMainContent(),
-        createFooter()
-    );
+const createHomePage = () => {
+    const homePage = createPage("home");
+    homePage.appendChild(createMainContent());
     showSlide();
-    animateNavMain();
+    return homePage;
 };
 
 export {
-    loadHomePage
+    createHomePage
 };
