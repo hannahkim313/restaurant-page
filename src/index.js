@@ -1,11 +1,12 @@
 import { createHeader } from "./modules/page-elements/header";
 import { createNavMain } from "./modules/page-elements/nav-main";
 import { createFooter } from "./modules/page-elements/footer";
-import { animateNavMain } from "./modules/page-functionalities/nav-main-functionality";
 import { createHomePage } from "./modules/pages/home-page";
 import { createAboutPage } from "./modules/pages/about-page";
 import { createMenuPage } from "./modules/pages/menu-page";
 import { createContactPage } from "./modules/pages/contact-page";
+import { animateNavMain } from "./modules/page-functionalities/nav-main-functionality";
+import { submitForm, transformInputs } from "./modules/page-functionalities/contact-page-functionality";
 import "./css/style.css";
 import "./css/reset.css";
 
@@ -21,6 +22,8 @@ body.append(
 );
 
 animateNavMain();
+transformInputs();
+submitForm();
 
 const hidePages = (...pages) => {
     for (const page of pages) page.style.display = "none";

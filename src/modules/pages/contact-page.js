@@ -86,14 +86,13 @@ const createMainContent = () => {
             const createSubmitBtn = () => {
                 const btn = document.createElement("button");
                 btn.setAttribute("type", "submit");
-                btn.setAttribute("disabled", "");
                 btn.textContent = "Submit";
                 return btn;
             };
 
             const form = document.createElement("form");
-            form.setAttribute("action", "#");
-            form.setAttribute("method", "post");
+            form.setAttribute("action", "");
+            form.setAttribute("method", "");
             form.append(
                 createField("name"),
                 createField("email"),

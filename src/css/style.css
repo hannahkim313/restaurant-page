@@ -523,16 +523,6 @@ footer img {
     outline: 2px solid var(--main-font-color);
 }
 
-#contact-page input:focus:required:valid,
-#contact-page textarea:focus:required:valid {
-    outline: 2px solid var(--dark-green);
-}
-
-#contact-page input:focus:required:invalid,
-#contact-page textarea:focus:required:invalid {
-    outline: 2px solid #d07f8e;
-}
-
 /* Selectors for the submit button start here. */
 
 #contact-page form button {
@@ -548,15 +538,10 @@ footer img {
     transition: all 0.4s;
 }
 
-#contact-page form button:not(:disabled):hover {
+#contact-page form button:hover {
     background-color: #a0626d;
 
     transition: all 0.4s;
-}
-
-#contact-page form button:disabled {
-    cursor:not-allowed;
-    opacity: 0.5;
 }
 
 /******************************************************************************/
