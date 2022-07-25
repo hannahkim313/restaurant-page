@@ -41,7 +41,6 @@ const createMainContent = () => {
                     input.setAttribute("id", `user_${data}`);
                     input.setAttribute("name", `user_${data}`);
                     input.setAttribute("maxlength", "30");
-                    input.setAttribute("pattern", "[a-zA-Z0-9]+");
                     input.setAttribute(
                         "title",
                         "Please enter a valid name (must only contain letters or numbers)."
