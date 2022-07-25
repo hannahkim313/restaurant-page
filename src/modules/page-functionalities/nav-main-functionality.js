@@ -13,9 +13,11 @@ const animateNavMain = () => {
     const links = document.querySelectorAll(".nav-main a");
     for (const link of links) {
         link.addEventListener("click", () => {
-            if (link !== activeLink) {
+            if (link !== activeLink && !link.parentElement.classList.contains("logo")) {
                 makeActive(link);
                 activeLink = link;
+            } else {
+                location.reload();
             }
         });
         link.addEventListener("mouseover", () => {
