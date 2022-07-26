@@ -6,6 +6,11 @@ This project exercise, created by The Odin Project, is a sample restaurant page
 for *Stacks,* an imaginary brunch establishment. This project demonstrates the use
 of webpack and ES6 modules combined with a heavy emphasis on DOM manipulation.
 
+## In Action
+
+### Features Overview
+<img src="./src/gif/demo.gif" width="auto" height="auto"/>
+
 ## Future Updates
 
 ### Code-splitting
