@@ -498,7 +498,7 @@ footer img {
     gap: 4px;
 }
 
-#contact-page form img[src*="asterisk"] {
+#contact-page form label img {
     width: 0.6rem;
     
     margin-bottom: 4px;

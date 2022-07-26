@@ -2,6 +2,7 @@ import { createPage } from "../page-elements/page";
 import { createContentDivider } from "../page-elements/content-divider";
 import { createSocials } from "../page-elements/socials";
 import { createPageTitle } from "../page-elements/page-title";
+import asteriskImg from "../../img/asterisk.svg";
 
 const createMainContent = () => {
     const createContent = () => {
@@ -25,7 +26,7 @@ const createMainContent = () => {
 
             const createLabel = (data) => {
                 const asterisk = document.createElement("img");
-                asterisk.src = "../src/img/asterisk.svg";
+                asterisk.src = asteriskImg;
                 asterisk.alt = "Required icon";
                 const label = document.createElement("label");
                 label.setAttribute("for", `user_${data}`);
