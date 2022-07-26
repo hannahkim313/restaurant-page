@@ -1,32 +1,44 @@
 # Restaurant Page
+https://hannahkim313.github.io/restaurant-page/
 
 ## Project Summary
-
 This project exercise, created by The Odin Project, is a sample restaurant page
-for an imaginary brunch establishment.
+for *Stacks,* an imaginary brunch establishment. This project demonstrates the use
+of webpack and ES6 modules combined with a heavy emphasis on DOM manipulation.
 
 ## Future Updates
 
-As I continue to learn more about and practice using webpack, I plan to revisit
-this project and implement the following to improve performance:
+### Code-splitting
+Currently, some of the fonts are producing asset size limit warning errors
+when running webpack. One of the ways to reduce file size and optimize web
+performance is through code-splitting. Once I learn about promises, I will go
+back and implement code-splitting to create dynamic imports and improve performance.
 
-* **Code-splitting**
-
-    Currently, some of the fonts are producing asset size limit warning errors
-    when running webpack. One of the ways to reduce file size and optimize web
-    performance is through code-splitting. Once I learn about promises, I plan
-    to go back and implement code-splitting to create dynamic imports.
+### Responsiveness
+This project is currently **not** responsive to smaller screens. In the future,
+I plan to include media queries and/or come up with a friendlier design.
 
 ## Goals
-
 * Use DOM manipulation to dynamically render a webpage
 * Gain a greater understanding of npm by installing packages
 * Organize code using modules
 * Gain a greater understanding of webpack by loading assets and managing
 output
 
-## Credits
+## Reflection
+This is my first time using webpack, and one of my favorite aspects about it is
+organizing my code into modules and having it all bundled for output. Separating
+my code into different groups made the development progress much easier as I 
+could easily keep track of specific elements, functions, and bugs. Besides webpack, 
+I had even more fun designing the web page itself. Researching restaurant website
+designs and looking at a few local ones helped inspire me to create a something a 
+real-life establishment would consider using. I tried to incorporate as many CSS
+techniques taught by the curriculum so far as well as some simple animations from
+my own research, but I will definitely add more in the future. I am also interested
+in experimenting with some of webpack's other features such as code-splitting, 
+but that will come in time as I learn about promises.
 
+## Credits
 * [Pancakes icon](https://www.flaticon.com/free-icon/pancakes_7450746?related_id=7450746) by [Luvdat](https://www.flaticon.com/authors/luvdat) on Flaticon
 
 * [Pancakes photo](https://www.freepik.com/free-photo/top-view-delicious-muffins-with-honey-choco-biscuits-light-background_16938099.htm#query=pancakes&position=11&from_view=search) by [kamranaydinov](https://www.freepik.com/author/kamranaydinov) on Freepik
