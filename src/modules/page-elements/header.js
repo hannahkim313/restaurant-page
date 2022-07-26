@@ -3,60 +3,51 @@ import clockImg from "../../img/clock.svg";
 import phoneImg from "../../img/phone.svg";
 
 const createHeader = () => {
-    const createMapIcon = () => {
-        const mapIcon = document.createElement("img");
-        mapIcon.src = mapMarkerImg;
-        mapIcon.alt = "Map marker icon";
-        return mapIcon;
-    };
-
-    const createMapInfo = () => {
-        const mapInfo = document.createElement("p");
-        mapInfo.textContent = "123 Pine Street, Portland OR";
-        return mapInfo;
-    };
-    
     const createDivider = () => {
         const divider = document.createElement("p");
         divider.textContent = "|";
         return divider;
     };
     
-    const createClockIcon = () => {
-        const clockIcon = document.createElement("img");
-        clockIcon.src = clockImg;
-        clockIcon.alt = "Clock icon";
-        return clockIcon;
+    const createMap = () => {
+        const mapIcon = document.createElement("img");
+        mapIcon.src = mapMarkerImg;
+        mapIcon.alt = "Map marker icon";
+        const mapInfo = document.createElement("p");
+        mapInfo.textContent = "123 Pine Street, Portland OR";
+        const map = document.createElement("div");
+        map.append(mapIcon, mapInfo);
+        return map;
     };
     
     const createHours = () => {
-        const hours = document.createElement("p");
-        hours.textContent = "Monday - Friday 10AM - 2PM, Saturday and Sunday 9AM - 2PM";
+        const clockIcon = document.createElement("img");
+        clockIcon.src = clockImg;
+        clockIcon.alt = "Clock icon";
+        const hoursInfo = document.createElement("p");
+        hoursInfo.textContent = "Monday - Friday 10AM - 2PM, Saturday and Sunday 9AM - 2PM";
+        const hours = document.createElement("div");
+        hours.append(clockIcon, hoursInfo);
         return hours;
     };
 
-    const createPhoneIcon = () => {
+    const createPhoneNumber = () => {
         const phoneIcon = document.createElement("img");
         phoneIcon.src = phoneImg;
         phoneIcon.alt = "Phone icon";
-        return phoneIcon;
-    };
-
-    const createPhoneNumber = () => {
-        const phoneNumber = document.createElement("p");
-        phoneNumber.textContent = "(123) 456-7890";
+        const phoneNumberInfo = document.createElement("p");
+        phoneNumberInfo.textContent = "(123) 456-7890";
+        const phoneNumber = document.createElement("div");
+        phoneNumber.append(phoneIcon, phoneNumberInfo);
         return phoneNumber;
     };
-    
+
     const address = document.createElement("address");
     address.append(
-        createMapIcon(),
-        createMapInfo(),
+        createMap(),
         createDivider(),
-        createClockIcon(),
         createHours(),
         createDivider(),
-        createPhoneIcon(),
         createPhoneNumber()
     );
     

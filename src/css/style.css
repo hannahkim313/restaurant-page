@@ -85,6 +85,13 @@ address {
     gap: 8px;
 }
 
+address div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
 /* Selectors for the main navbar start here. */
 
 .nav-main {
