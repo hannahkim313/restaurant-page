@@ -19,6 +19,11 @@ when running webpack. One of the ways to reduce file size and optimize web
 performance is through code-splitting. Once I learn about promises, I will go
 back and implement code-splitting to create dynamic imports and improve performance.
 
+### Image Optimization
+The first image of the slideshow is rendering at about 10MB, which I plan to
+optimize using either a webpack plugin or some other external program in a
+future update. 
+
 ### Responsiveness
 This project is currently **not** responsive to smaller screens. In the future,
 I plan to include media queries and/or come up with a friendlier design.
